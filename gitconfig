@@ -1,0 +1,44 @@
+### Piperita Theme ###
+# Theme by Jacob Tomlinson
+# https://github.com/killfall/terminal-piperita
+
+[alias]
+	co = checkout
+	b = branch
+	ci = commit
+  cam = commit -a -m
+	s = status
+  r = remote -v
+  pom = push origin master
+  p = push
+  po = push origin
+  pof = push origin -f
+  pofm = push origin -f master
+  d = diff
+  rb = rebase
+  rbc = rebase --continue
+  rba = rebase --abort
+  rbum = rebase upstream/master
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -p
+  fu = fetch upstream
+  rh2 = rebase -i HEAD~2
+  rsh = reset --hard
+  f = fetch
+  ck = cherry-pick
+  ckc = cherry-pick --continue
+  cka = cherry-pick --abort
+
+### End Piperita Theme ###
+[core]
+	excludesfile = /Users/guobingkun/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Kleagleguo
+	email = guobingkun@hotmail.com
+	username = Kleagleguo 
