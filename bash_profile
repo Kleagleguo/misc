@@ -33,3 +33,12 @@ parse_git_branch() {
 }
 # export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[32m\]\$(parse_git_branch)\[\033[00m\]\$ "
 export PS1="\[\033[1;37m\][\t]\[\033[m\] \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\n\$(parse_git_branch)-> "
+
+git_k() {
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/id_rsa_kleagleguo
+}
+
+git_g() {
+  ssh-add
+}
